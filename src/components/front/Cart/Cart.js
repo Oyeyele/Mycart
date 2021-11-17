@@ -12,7 +12,7 @@ const Cart = ({ cartItems, Addproduct, handleRemove, handleCartClearance }) => {
           </button>
         )}
       </div>
-      {cartItems.length === 0 && <div>Your cart is empty</div>}
+      {cartItems.length === 0 && <div>Your cart is empty!</div>}
       <div>
         {cartItems.map((item, id) => (
           <div key={id} className="cart-item">
