@@ -1,0 +1,26 @@
+.content {
+  margin: 30px auto;
+  width: 50%;
+  background-color: blue;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  border-bottom: 2px solid black;
+}
+
+.clear-cart {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(31, 163, 152);
+  height: 30px;
+  width: 100px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}

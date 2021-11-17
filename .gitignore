@@ -1,0 +1,174 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+function Itemlist() {
+  return (
+    <div className="App">
+      <header>
+        <button>Go to Cart({...item})</button>
+      </header>
+      <h1>Shopping Cart</h1>
+      {items.map((item, index) => {
+        return <Item item={item} key={index}></Item>;
+      })}
+    </div>
+  );
+}
+
+const Item = (props) => {
+  // console.log(props); not needed, i just viewed the prop here
+  const { img, name, price } = props.item;
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (item) => setCart(...cart, item);
+  return (
+    <div className="Item">
+      <img src={img} alt={name} />
+      <h3>{name}</h3>
+      <h3>{price}</h3>
+      <button onClick={() => addToCart(item)}>Add to Cart</button>
+    </div>
+  );
+};
+
+export default Itemlist;
+
+import "./App.css";
+import React, { useState } from "react";
+
+export function App() {
+  const [cart, setCart] = useState([]);
+  const [items] = useState([
+    // only the initial state is used here
+    {
+      img: "https://m.media-amazon.com/images/I/51cGoJ8q0aS._AC_UL320_.jpg",
+      name: "Nike Men's Benassi",
+      price: "#18,000",
+    },
+    {
+      img: "https://m.media-amazon.com/images/I/31w0P4k2nHL._AC_UL320_.jpg",
+      name: "Nike Victori One Men's",
+      price: "#25,000",
+    },
+    {
+      img: "https://m.media-amazon.com/images/I/61Cttrjws5L._AC_UL320_.jpg",
+      name: "Nike Victori One Men's",
+      price: "#25,000",
+    },
+    {
+      img: "https://m.media-amazon.com/images/I/71-yLF6Lp+L._AC_UL320_.jpg",
+      name: "adidas Men's Clogs Slipper",
+      price: "#15,000",
+    },
+    {
+      img: "https://m.media-amazon.com/images/I/71QYyG5cWWL._AC_UL320_.jpg",
+      name: "Nautica Men's Slide",
+      price: "#15,000",
+    },
+    {
+      img: "https://m.media-amazon.com/images/I/81DHzfD+eIL._AC_UL320_.jpg",
+      name: "Crocs Men's Classic Realtree Clog ",
+      price: "#30,000",
+    },
+  ]);
+
+  const addToCart = (item) => {
+    setCart([...cart, item]);
+  };
+  return (
+    <div className="App">
+      <header>
+        <button>Go to Cart ({cart.length})</button>
+      </header>
+      <h1>Items</h1>
+      {items.map((item, index) => {
+        return (
+          <div key={index} className="Item">
+            <h3>{item.name}</h3>
+            <h4>{item.price}</h4>
+            <img src={item.img} alt="" />
+            <button onClick={() => addToCart(item)}>Add to Cart</button>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  color: blue;
+}
+
+.App {
+  text-align: center;
+}
+
+.Item {
+  padding: 30px 10px;
+  text-align: center;
+  transition: 0.3ms;
+}
+
+.App h1 {
+  color: black;
+}
+
+button {
+  border-radius: 0.5rem;
+  transition: 0.5s;
+  font-size: 15px;
+  padding: 10px;
+  color: blue;
+  border: 2px solid blue;
+}
+
+button:hover {
+  background-color: #dddddd;
+}
+
+header {
+  background-color: blue;
+  height: 70px;
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  /*anything from 768px upward takes this */
+  .App {
+    grid-template-columns: repeat(3, 1fr); /*# on row, 1 fraction*/
+    align-items: start;
+  }
+}
+@media (max-width: 590px) {
+  .App {
+    grid-template-columns: repeat(2, 1fr); /*# on row, 1 fraction*/
+    align-items: start;
+  }
+}
