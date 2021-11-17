@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Cart-App/static/css/main.53fc4b8e.chunk.css",
+    "main.js": "/Cart-App/static/js/main.29e4a16a.chunk.js",
+    "main.js.map": "/Cart-App/static/js/main.29e4a16a.chunk.js.map",
+    "runtime-main.js": "/Cart-App/static/js/runtime-main.b6f86583.js",
+    "runtime-main.js.map": "/Cart-App/static/js/runtime-main.b6f86583.js.map",
+    "static/js/2.56106791.chunk.js": "/Cart-App/static/js/2.56106791.chunk.js",
+    "static/js/2.56106791.chunk.js.map": "/Cart-App/static/js/2.56106791.chunk.js.map",
+    "static/js/3.57452d6f.chunk.js": "/Cart-App/static/js/3.57452d6f.chunk.js",
+    "static/js/3.57452d6f.chunk.js.map": "/Cart-App/static/js/3.57452d6f.chunk.js.map",
+    "index.html": "/Cart-App/index.html",
+    "static/css/main.53fc4b8e.chunk.css.map": "/Cart-App/static/css/main.53fc4b8e.chunk.css.map",
+    "static/js/2.56106791.chunk.js.LICENSE.txt": "/Cart-App/static/js/2.56106791.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b6f86583.js",
+    "static/js/2.56106791.chunk.js",
+    "static/css/main.53fc4b8e.chunk.css",
+    "static/js/main.29e4a16a.chunk.js"
+  ]
+}
