@@ -26,6 +26,9 @@ const Cart = ({ cartItems, Addproduct, handleRemove, handleCartClearance }) => {
                 -
               </button>
             </div>
+            <div className="item-price">
+              {item.quantity} * {item.price}
+            </div>
           </div>
         ))}
       </div>
