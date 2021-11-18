@@ -1,8 +1,8 @@
 .content {
   margin: 30px auto;
   width: 50%;
-  background-color: blue;
-  border: 2px solid black;
+  background-color: rgb(238, 163, 191);
+  border: 1px solid grey;
   border-radius: 5px;
 }
 
